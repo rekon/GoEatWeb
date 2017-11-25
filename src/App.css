@@ -34,6 +34,16 @@
   padding: 5px;
 }
 
+.bmr-value-header{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  flex: 1 1 0%;
+}
+
+
 /*-------------------NAVIGATION SIDEBAR--------------------------*/
 a.left-side-drawer-link:link    {
   /* Applies to unvisited links of class left-side-drawer-link */

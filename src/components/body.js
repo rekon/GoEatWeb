@@ -8,9 +8,9 @@ class Body extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path='/' component={Homepage}/>
-        <Route exact path='/bulking' component={Bulking}/>
-        <Route exact path='/cutting' component={Cutting}/>
+        <Route exact path='/'><Homepage {...this.props} /></Route>
+        <Route exact path='/bulking'><Bulking {...this.props} /></Route>
+        <Route exact path='/cutting'><Cutting {...this.props} /></Route>
       </Switch>
     )
   }
