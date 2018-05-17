@@ -8,9 +8,15 @@ class Body extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path='/' component={Homepage}/>
-        <Route exact path='/bulking' component={Bulking}/>
-        <Route exact path='/cutting' component={Cutting}/>
+        <Route exact path='/' render={({location, history})=>
+          <Homepage {...this.props} location={location} history={history}/>
+        }/>
+        <Route exact path='/bulking' render={({location, history})=>
+          <Bulking {...this.props} location={location} history={history}/>
+        }/>
+        <Route exact path='/cutting' render={({location, history})=>
+          <Cutting {...this.props} location={location} history={history}/>
+        }/>
       </Switch>
     )
   }

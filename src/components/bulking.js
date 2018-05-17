@@ -43,9 +43,9 @@ class Bulking extends Component {
         fats: 2
       } ],
 
-      foodItems = foods.map( food => {
+      foodItems = foods.map( (food, index) => {
         return (
-          <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3 go-eat-mini-chart thumbnail'>
+          <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3 go-eat-mini-chart thumbnail' key={index}>
             <MiniChart name={food.name} proteins={food.proteins} carbohydrates={food.carbohydrates} fats={food.fats} />
           </div>
         )
@@ -102,7 +102,7 @@ class Bulking extends Component {
         <div className='row'>
           <div className='col-xs-12 col-md-4 col-lg-6'>
             <center><h3>Daily Intake</h3></center>
-            {bulking_context( 3500 )}
+            {bulking_context( this.props.BmrReducer.bmrValueModified )}
           </div>
           <div className='col-xs-12 col-md-8 col-lg-6'>
             <Chart options={options}/>
