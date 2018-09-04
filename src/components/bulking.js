@@ -101,7 +101,7 @@ class Bulking extends Component {
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-xs-12 col-md-4 col-lg-6'>
-            <center><h3>Daily Intake</h3></center>
+            <center><h3>Daily Intake (Bulking)</h3></center>
             {bulking_context( this.props.BmrReducer.bmrValueModified )}
           </div>
           <div className='col-xs-12 col-md-8 col-lg-6'>

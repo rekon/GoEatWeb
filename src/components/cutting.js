@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Chart from './chart';
 import Highcharts from 'highcharts'
+import { cutting_context } from '../utils/cutting_context'
 
 class Cutting extends Component {
   render() {
@@ -54,7 +55,8 @@ class Cutting extends Component {
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-xs-4'>
-            <center><h3>Daily Intake</h3></center>
+            <center><h3>Daily Intake (Cutting)</h3></center>
+            {cutting_context( this.props.BmrReducer.bmrValueModified )}
           </div>
           <div className='col-xs-8'>
             <Chart options={options}/>
